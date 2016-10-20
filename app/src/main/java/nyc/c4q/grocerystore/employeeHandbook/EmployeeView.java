@@ -18,7 +18,14 @@ public class EmployeeView extends AppCompatActivity {
         setContentView(R.layout.employee_view);
         String employee = getIntent().getStringExtra(EMPLOYEE_NAME);
         if(employee != null){
-            // call a function
+            switch (employee){
+                case "Asia":
+                    showAsia();
+                    break;
+
+                default:
+                    break;
+            }
         }
     }
 
@@ -26,6 +33,15 @@ public class EmployeeView extends AppCompatActivity {
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.employee_profile,new Ashique());
+        fragmentTransaction.commit();
+    }
+
+    private void showAsia(){
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        //AsiaFrag fragment = new AsiaFrag();
+        fragmentTransaction.add(R.id.employee_profile, new AsiaFrag());
         fragmentTransaction.commit();
     }
 }
