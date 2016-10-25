@@ -87,6 +87,9 @@ public class EmployeeView extends AppCompatActivity {
                 case "Taryn":
                     showTaryn();
                     break;
+case "Asia":
+                    showAsia();
+                    break;
                 default:
                     break;
                 
@@ -205,6 +208,15 @@ public class EmployeeView extends AppCompatActivity {
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.employee_profile,new Taryn());
+        fragmentTransaction.commit();
+    }
+
+    private void showAsia(){
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        //AsiaFrag fragment = new AsiaFrag();
+        fragmentTransaction.add(R.id.employee_profile, new AsiaFrag());
         fragmentTransaction.commit();
     }
 }

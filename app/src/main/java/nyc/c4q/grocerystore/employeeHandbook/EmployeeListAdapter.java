@@ -31,6 +31,8 @@ class EmployeeListAdapter extends RecyclerView.Adapter{
         new EmployeeDescription("Akasha", R.drawable.aa_profile_pic),
         new EmployeeDescription("Yojana", R.drawable.yojana1),
         new EmployeeDescription("Taryn", R.drawable.taryn_selfie)*/
+new EmployeeDescription("Asia", R.drawable.me)
+
 
 
     );
